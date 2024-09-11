@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/tieszenp/public_html/
-    - /bin/cp -R repositories/AJTieszen-Portfolio/main $DEPLOYPATH
+    - /bin/cp -R repositories/AJTieszen-Portfolio/main/* $DEPLOYPATH
