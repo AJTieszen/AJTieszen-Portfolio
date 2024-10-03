@@ -3,6 +3,27 @@
     styles.css
     02 October 2024
 */
+
 body {
     background-color: #ccd;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+#profile {
+    float: left;
+}
+
+#logo {
+    float: right;
+}
+
+#title {
+    text-align: center;
 }
