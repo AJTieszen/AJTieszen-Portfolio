@@ -16,6 +16,13 @@ img {
 
 
 
+
+
+
+#profile, #logo {
+    max-width: 20%;
+}
+
 #profile {
     float: left;
 }
@@ -26,4 +33,5 @@ img {
 
 #title {
     text-align: center;
+    display: block;
 }
