@@ -1,3 +1,84 @@
+/*
+    Andrew J. Tieszen
+    styles.css
+    02 October 2024
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
-    background-color: crimson;
+    background-color: #bbc;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    font-size: 1.2em;
+}
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
+
+main {
+    clear: left;
+    background-color: #fff;
+    padding: 2%;
+    font-size: 1.2em;
+}
+
+footer{
+    clear: both;
+}
+
+.end-of-columns {
+    clear: left;
+}
+
+#profile, #logo {
+    max-width: 18%;
+}
+
+#profile {
+    float: left;
+    padding: 0 1em 1em 0;
+}
+
+#logo {
+    float: right;
+    padding: 0 0 1em 1em;
+}
+
+#title {
+    text-align: center;
+    display: block;
+    padding: 0 10px 0 10px;
+}
+
+#bio, #highlight {
+    float: left;
+    width: 48%;
+    display: block;
+    padding: 0 1em 0 0;
 }
