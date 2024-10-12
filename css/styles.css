@@ -50,6 +50,11 @@ nav ul li {
     display: inline-block;
     font-size: 1.2em;
     border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+nav ul li:first-child {
+    border-left: 0px;
 }
 
 nav ul li:last-child {
@@ -66,11 +71,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: orange;
+    color: aqua;
 }
 
 nav ul li a.active {
     color: aqua;
+    background: #5984B2;
 }
 
 /* Style rules for main content */
@@ -86,7 +92,7 @@ main p a {
     color: #3F5C7F;
 }
 main p a:hover {
-    color: blue;
+    color: #5984B2;
 }
 
 /* Sytyle rules for footer */
@@ -116,20 +122,15 @@ footer a {
     padding: 0 1em 1em 0;
 }
 
-#logo {
-    float: right;
-    padding: 0 0 1em 1em;
-}
-
 #title {
     text-align: left;
     display: block;
-    margin-left: 20em;
+    margin-left: 40%;
 }
 
 #bio, #highlight {
     float: left;
-    width: 48%;
+    width: 46%;
     display: block;
-    padding: 0 1em 0 0;
+    padding: 0 1.5% 0 1.5%;
 }
