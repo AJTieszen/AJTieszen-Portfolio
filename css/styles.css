@@ -1,11 +1,11 @@
 /*
     Andrew J. Tieszen
     styles.css
-    02 October 2024
+    10 October 2024
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, img {
+body, header, nav, main, footer, h1, img, ul {
     margin: 0;
     padding: 0;
     border: 0;
