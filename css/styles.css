@@ -13,7 +13,7 @@ body, header, nav, main, footer, h1, img, ul {
 
 /* General style rules */
 body {
-    background-color: #3F5C7F;
+    background-color: #357;
 }
 
 img {
@@ -23,7 +23,7 @@ img {
     border-radius: 10px;
 }
 
-/* Style rules forn header */
+/* Style rules for header */
 header {
     color: #fff;
     font-family: Helvetica, Arial, sans-serif;
@@ -78,7 +78,7 @@ nav ul li a:hover {
 
 nav ul li a.active {
     color: aqua;
-    background: #5984B2;
+    background: #68B;
 }
 
 /* Style rules for main content */
@@ -91,10 +91,10 @@ main {
 
 main a {
     text-decoration: none;
-    color: #3F5C7F;
+    color: #357;
 }
 main a:hover {
-    color: #5984B2;
+    color: #68B;
 }
 
 /* Sytyle rules for footer */
