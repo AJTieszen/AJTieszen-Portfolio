@@ -19,7 +19,6 @@ body {
 img {
     max-width: 100%;
     display: block;
-    border: 1px solid #000;
 }
 
 /* Style rules forn header */
@@ -82,9 +81,24 @@ main {
     font-size: 1.2em;
 }
 
+main p a {
+    text-decoration: none;
+    color: #3F5C7F;
+}
+main p a:hover {
+    color: blue;
+}
+
 /* Sytyle rules for footer */
-footer{
+footer {
     clear: both;
+    text-align: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Ensure formatting continues past columns */
