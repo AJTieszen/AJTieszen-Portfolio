@@ -81,20 +81,40 @@ nav ul li a.active {
 }
 
 /* Style rules for main content */
-main {
-    clear: left;
-    background-color: #fff;
-    padding: 2%;
-    font-size: 1.2em;
+@media (prefers-color-scheme: light) {
+    main {
+        clear: left;
+        background-color: #fff;
+        padding: 2%;
+        font-size: 1.2em;
+    }
+
+    main a {
+        text-decoration: none;
+        color: #357;
+    }
+    main a:hover {
+        color: #68B;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    main {
+        clear: left;
+        background-color: #223;
+        color: #fff;
+        padding: 2%;
+        font-size: 1.2em;
+    }
+
+    main a {
+        text-decoration: none;
+        color: #68B;
+    }
+    main a:hover {
+        color: #357;
+    }
 }
 
-main a {
-    text-decoration: none;
-    color: #357;
-}
-main a:hover {
-    color: #68B;
-}
 
 /* Sytyle rules for footer */
 footer {
