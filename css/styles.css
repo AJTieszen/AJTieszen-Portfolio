@@ -17,21 +17,37 @@ body {
 }
 
 img {
-    max-width: 100%;
+    max-width: 60%;
     display: block;
-    border: 2px solid black;
+    border: 2px solid;
     border-radius: 10px;
+    margin: auto;
+}
+@media (prefers-color-scheme: light) {
+    img {
+        border-color: black;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    img {
+        border-color: white;
+    }
 }
 
 /* Style rules for header */
 header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     color: #fff;
+    background-color: #357;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 header h1 {
-    font-size: 3.5em;
-    padding-top: 1.0em;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em 0 1em 0;
 }
 
 header h2 {
@@ -42,24 +58,17 @@ header h2 {
 /* Style rules for nav */
 nav ul {
     list-style-type: none;
-    margin: 0;
-    margin-right: 1em;
-    text-align: right;
+    margin: auto;
 }
 
 nav ul li {
-    display: inline-block;
+    display: block;
     font-size: 1.2em;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 nav ul li:first-child {
-    border-left: 0px;
-}
-
-nav ul li:last-child {
-    border-right: 0px;
+    border-top: 1px solid #fff;
 }
 
 nav ul li a {
@@ -84,6 +93,7 @@ nav ul li a.active {
 main {
     clear: left;
     font-size: 1.0em;
+    padding: 2%;
 }
 main a {
     text-decoration: none;
@@ -141,19 +151,6 @@ footer a {
 .map {
     border: 2px solid #000;
     border-radius: 10px;
-}
-
-/* Header formatting overrides */
-#profile {
-    max-width: 20%;
-    margin: 1em 1em 1em 1em;
-    float: left;
-}
-
-#title {
-    text-align: left;
-    display: block;
-    margin-left: 40%;
 }
 
 /* Contact page formatting overrides */
