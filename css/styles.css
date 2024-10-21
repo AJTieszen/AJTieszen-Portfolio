@@ -24,12 +24,12 @@ img {
     margin: auto;
 }
 @media (prefers-color-scheme: light) {
-    img {
+    html {
         border-color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    img {
+    html {
         border-color: white;
     }
 }
@@ -48,11 +48,6 @@ header h1 {
     text-align: center;
     font-size: 2.5em;
     margin: 1em 0 1em 0;
-}
-
-header h2 {
-    font-size: 1.25em;
-    padding-bottom: 2.5em;
 }
 
 /* Style rules for nav */
@@ -91,7 +86,6 @@ nav ul li a.active {
 
 /* Style rules for main content */
 main {
-    clear: left;
     font-size: 1.0em;
     padding: 2%;
 }
@@ -132,6 +126,8 @@ footer {
     clear: both;
     text-align: center;
     color: #fff;
+    position: sticky;
+    position: -webkit-sticky;
 }
 
 footer a {
@@ -144,14 +140,22 @@ footer a {
     display: none;
 }
 
-.end-of-columns {
-    clear: both;
+.mobile {
+    display: block;
 }
 
 .map {
-    border: 2px solid #000;
+    border: 2px solid;
     border-radius: 10px;
+    width: 90%;
+    aspect-ratio: 16/9;
 }
+@media (prefers-color-scheme: dark) {
+    .map {
+        border-color: aqua;
+    }
+}
+
 
 /* Contact page formatting overrides */
 #contact {
