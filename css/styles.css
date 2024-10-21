@@ -1,7 +1,7 @@
 /*
     Andrew J. Tieszen
     styles.css
-    10 October 2024
+    21 October 2024
 */
 
 /* CSS Reset */
@@ -81,16 +81,21 @@ nav ul li a.active {
 }
 
 /* Style rules for main content */
+main {
+    clear: left;
+    font-size: 1.0em;
+}
+main a {
+    text-decoration: none;
+}
+
+/* Color rules for main content */
 @media (prefers-color-scheme: light) {
     main {
-        clear: left;
         background-color: #fff;
-        padding: 2%;
-        font-size: 1.2em;
     }
 
     main a {
-        text-decoration: none;
         color: #357;
     }
     main a:hover {
@@ -99,15 +104,11 @@ nav ul li a.active {
 }
 @media (prefers-color-scheme: dark) {
     main {
-        clear: left;
         background-color: #223;
         color: #fff;
-        padding: 2%;
-        font-size: 1.2em;
     }
 
     main a {
-        text-decoration: none;
         color: #68B;
     }
     main a:hover {
@@ -129,6 +130,10 @@ footer a {
 }
 
 /* Class formats */
+.desktop {
+    display: none;
+}
+
 .end-of-columns {
     clear: both;
 }
@@ -149,14 +154,6 @@ footer a {
     text-align: left;
     display: block;
     margin-left: 40%;
-}
-
-/* Homepage formatting overrides */
-#bio, #highlight {
-    float: left;
-    width: 46%;
-    display: block;
-    padding: 0 1.5% 0 1.5%;
 }
 
 /* Contact page formatting overrides */
