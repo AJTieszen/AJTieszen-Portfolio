@@ -1,1 +1,3 @@
-I used Firefox's developer tools to simulate a mobile viewport and data connection speeds, as well as Google Fonts per the assignment to apply fonts that should load for all devices. I may have also searched online how to do things that were not covered for class, although this was mostly done on the previous chapter. Any such sources are included as comments in the code.
+I used Firefox's developer tools to simulate a mobile viewport and data connection speeds, as well as Google Fonts per the assignment to apply fonts that should load
+for all devices. I may have also searched online how to do things that were not covered in class, although this was mostly done on the previous chapter. Any such
+sources are included as comments in the code.
