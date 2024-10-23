@@ -11,7 +11,7 @@ body, header, nav, main, footer, h1, img, ul {
     border: 0;
 }
 
-/* General style rules */
+/* Style Rules for mobile */
 body {
     background-color: #357;
 }
@@ -23,7 +23,8 @@ img {
     border-radius: 10px;
     margin: auto;
 }
-@media (prefers-color-scheme: light) {
+
+@media (prefers-color-scheme: light) { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
     html {
         border-color: black;
     }
@@ -38,23 +39,31 @@ a {
     display: inline-block;
 }
 
-/* Style rules for header */
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+/* Mobile style rules for header */
 header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     color: #fff;
     background-color: #357;
+    text-align: center;
     font-family: "Roboto", sans-serif;
 }
 
 header h1 {
-    text-align: center;
     font-size: 2.5em;
     margin: 1em 0 1em 0;
 }
 
-/* Style rules for nav */
+/* Mobile style rules for nav */
 nav ul {
     list-style-type: none;
     margin: auto;
@@ -88,7 +97,7 @@ nav ul li a.active {
     background: #68B;
 }
 
-/* Style rules for main content */
+/* Mobile style rules for main content */
 main {
     font-size: 1.0em;
     padding: 2%;
@@ -98,7 +107,7 @@ main a {
     text-decoration: none;
 }
 
-/* Color rules for main content */
+/* Mobile color rules for main content */
 @media (prefers-color-scheme: light) {
     main {
         background-color: #fff;
@@ -125,10 +134,38 @@ main a {
     }
 }
 
+.email-link {
+    font-size: 1.3em;
+}
 
-/* Sytyle rules for footer */
+/* Mobile style rules for contact page */
+
+.map {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 90%;
+    aspect-ratio: 16/9; /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio */
+}
+@media (prefers-color-scheme: dark) {
+    .map {
+        border-color: aqua;
+    }
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact ul {
+    list-style-type: none;
+}
+
+#college {
+    text-align: center;
+}
+
+/* Mobile style rules for footer */
 footer {
-    clear: both;
     text-align: center;
     color: #fff;
     position: sticky;
@@ -140,41 +177,54 @@ footer a {
     text-decoration: none;
 }
 
-/* Class formats */
-.desktop {
-    display: none;
-}
-
-.mobile {
-    display: block;
-}
-
-.email-link {
-    font-size: 1.3em;
-}
-
-.map {
-    border: 2px solid;
-    border-radius: 10px;
-    width: 90%;
-    aspect-ratio: 16/9;
-}
-@media (prefers-color-scheme: dark) {
-    .map {
-        border-color: aqua;
+/* Style rules for tablets */
+@media screen and (min-width: 769px) {
+    img {
+        max-width: 100%;
     }
-}
 
+    .desktop {
+        display: block;
+    }
 
-/* Contact page formatting overrides */
-#contact {
-    text-align: center;
-}
+    .mobile {
+        display: none;
+    }
 
-#contact ul {
-    list-style-type: none;
-}
+    /* Tablet style rules for header */
+    header {
+        /* remove sticky header */
+        position: static;
+    }
 
-#college {
-    text-align: center;
+    header h1 {
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    #profile {
+        float: left;
+        max-width: 100px;
+        margin-left: 1.0em;
+    }
+    #profile img {
+        border-color: white;
+    }
+
+    /* Tablet style rules for nav area */
+    nav {
+        clear: left;
+    }
+    nav ul {
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    nav ul li {
+        display: inline-block;
+        border-bottom: none;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+    nav ul li:first-child {
+        border-top: none;
+    }
 }
