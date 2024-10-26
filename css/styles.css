@@ -1,7 +1,7 @@
 /*
     Andrew J. Tieszen
     styles.css
-    21 October 2024
+    26 October 2024
 */
 
 /* CSS Reset */
@@ -99,7 +99,7 @@ nav ul li a.active {
 
 /* Mobile style rules for main content */
 main {
-    font-size: 1.0em;
+    font-size: 1.2em;
     padding: 2%;
     font-family: "Tinos", serif;
 }
@@ -136,6 +136,8 @@ main a {
 
 .email-link {
     font-size: 1.3em;
+    display: block;
+    text-align: center;
 }
 
 /* Mobile style rules for contact page */
@@ -203,7 +205,7 @@ footer a {
 
     #profile {
         float: left;
-        max-width: 100px;
+        max-width: 150px;
         margin-left: 1.0em;
     }
     #profile img {
@@ -226,5 +228,28 @@ footer a {
     }
     nav ul li:first-child {
         border-top: none;
+    }
+
+    /* Tablet style rules for main area */
+    main {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Temporary; must include gradient in assignment submission. */
+    @media screen and (prefers-color-scheme: light) {
+        main {
+            background: linear-gradient(to bottom, #fff, #68B);
+        }
+    }
+    @media screen and (prefers-color-scheme: dark) {
+        main {
+            background: linear-gradient(to bottom, #223, #000);
+        }
+    }
+
+    /* Tablet style rules for footer */
+    .email-link {
+        font-size: 1.0em;
     }
 }
