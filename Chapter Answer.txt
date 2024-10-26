@@ -1,7 +1,3 @@
-I did try to center an image, just to see if it would work (This is not present in the current version of the website). The text-align property does not center the image when applied directly to it, but it appears to center images contained within a div containing the property. The proper way to center an image, according to https://www.w3schools.com/howto/howto_css_image_center.asp, is to apply the following CSS to the image element, or a class or id used to identify it:
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-Make sure the image has a width set less than 100%.
+I used Firefox's developer tools to simulate a mobile viewport and data connection speeds, as well as Google Fonts per the assignment to apply fonts that should load
+for all devices. I may have also searched online how to do things that were not covered in class, although this was mostly done on the previous chapter. Any such
+sources are included as comments in the code.
