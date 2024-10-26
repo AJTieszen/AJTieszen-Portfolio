@@ -2,24 +2,32 @@
 <!--
     Andrew J. Tieszen
     portfolio.html
-    02 October 2024
+    21 October 2024
 -->
 <html lang="en">
     <head>
-        <title> Andrew J. Tieszen | Portfolio </title>
+        <title> Andrew J. Tieszen </title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Signal to browser that website is responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Import Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <div id="profile">
+            <div id="profile" class="desktop">
                 <a href="index.html"><img src="images/RockWall.jpg" alt="Andrew at the rock wall"></a>
             </div>
 
             <div id="title">
                 <h1> Andrew J. Tieszen </h1>
-                <h2> BSEN - mechatronics, minor in CIS - programming </h2>
+                <h2 class="desktop"> BSEN - mechatronics, minor in CIS - programming </h2>
             </div>
         </header>
         
@@ -42,7 +50,7 @@
 
         <footer>
             <p> &copy; Copyright Andrew Tieszen 2024 | All rights reserved. </p>
-            <p> <a href="mailto:aj.tieszen@pack.csupueblo.edu"> aj.tieszen@pack.csupueblo.edu </a> </p>
+            <p> <a href="mailto:aj.tieszen@pack.csupueblo.edu" class="email-link"> aj.tieszen@pack.csupueblo.edu </a> </p>
         </footer>
     </body>
 </html>
