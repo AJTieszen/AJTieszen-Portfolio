@@ -180,7 +180,7 @@ footer a {
 }
 
 /* Style rules for tablets */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 500px) {
     img {
         max-width: 100%;
     }
@@ -213,9 +213,6 @@ footer a {
     }
 
     /* Tablet style rules for nav area */
-    nav {
-        clear: left;
-    }
     nav ul {
         text-align: center;
         margin-bottom: 1%;
@@ -232,6 +229,7 @@ footer a {
 
     /* Tablet style rules for main area */
     main {
+        clear: left;
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -252,4 +250,33 @@ footer a {
     .email-link {
         font-size: 1.0em;
     }
+}
+
+/* Media query for ONLY tablets */
+@media screen and (min-width: 500px) and (max-width: 899px) {
+    /* Display nav below profile image */
+    nav {
+        clear: left;
+    }
+}
+
+
+/* Media query for laptops and desktops */
+@media screen and (min-width: 900px) {
+    /* Desktop style rules for header */
+    .profile a img {
+        width: 250;
+    }
+
+    /* Desktop style rules for nav area */
+    nav {
+        float: none;
+        margin-right: 2em;
+    }
+    nav ul {
+        text-align: right;
+    }
+
+    /* Desktop style rules for main area */
+    #bio:
 }
