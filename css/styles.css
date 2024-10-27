@@ -257,9 +257,17 @@ footer a {
     /* Display nav below profile image */
     nav {
         clear: left;
+        margin-top: 3em;
     }
 }
 
+/* Media query for large tablets */
+@media screen and (min-width: 750px) {
+    /* Remove line break in subtitle and nav area */
+    .small-tablets {
+        display: none;
+    }
+}
 
 /* Media query for laptops and desktops */
 @media screen and (min-width: 900px) {
@@ -278,5 +286,22 @@ footer a {
     }
 
     /* Desktop style rules for main area */
-    #bio:
+    .end-of-columns {
+        clear: both;
+    }
+
+    #bio {
+        float: left;
+        max-width: 48%;
+    }
+
+    #highlight {
+        float: right;
+        max-width: 48%;
+    }
+    
+    #highlight img {
+        max-width: 98%;
+    }
+    
 }
