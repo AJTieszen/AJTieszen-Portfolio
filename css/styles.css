@@ -1,7 +1,7 @@
 /*
     Andrew J. Tieszen
     styles.css
-    26 October 2024
+    27 October 2024
 */
 
 /* CSS Reset */
@@ -10,6 +10,11 @@ body, header, nav, main, footer, h1, img, ul {
     padding: 0;
     border: 0;
 }
+
+/* Constants: Source: https://sciter.com/developers/for-web-programmers/css-constants/ */
+@const BRKPT_TABLETS: 500px;
+@const BRKPT_LG_TABLETS: 750px;
+@const BRKPT_DESKTOPS: 1000px;
 
 /* Style Rules for mobile */
 body {
@@ -205,7 +210,7 @@ footer a {
 
     #profile {
         float: left;
-        max-width: 150px;
+        max-width: 125px;
         margin-left: 1.0em;
     }
     #profile img {
@@ -249,11 +254,12 @@ footer a {
     /* Tablet style rules for footer */
     .email-link {
         font-size: 1.0em;
+        display: inline-block;
     }
 }
 
 /* Media query for ONLY tablets */
-@media screen and (min-width: 500px) and (max-width: 899px) {
+@media screen and (min-width: 500px) and (max-width: 999px) {
     /* Display nav below profile image */
     nav {
         clear: left;
@@ -270,22 +276,35 @@ footer a {
 }
 
 /* Media query for laptops and desktops */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     /* Desktop style rules for header */
-    .profile a img {
-        width: 250;
+    header h1 {
+        font-size: 4em;
+    }
+    header h2 {
+        margin-top: 1.5em;
+        font-size: 1.75em;
+    }
+    #profile {
+        max-width: 100%;
+        margin-bottom: 1em;
     }
 
     /* Desktop style rules for nav area */
     nav {
         float: none;
-        margin-right: 2em;
+        margin-right: 1em;
+        margin-top: 3.5em;
     }
     nav ul {
         text-align: right;
     }
 
     /* Desktop style rules for main area */
+    main li a {
+        display: inline-block;
+    }
+
     .end-of-columns {
         clear: both;
     }
@@ -301,7 +320,6 @@ footer a {
     }
     
     #highlight img {
-        max-width: 98%;
+        max-width: 100%;
     }
-    
 }
