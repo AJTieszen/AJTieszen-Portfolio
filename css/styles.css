@@ -68,6 +68,10 @@ header h1 {
 }
 
 /* Mobile style rules for nav */
+nav {
+    background-color: #357;
+}
+
 nav ul {
     list-style-type: none;
     margin: auto;
@@ -184,7 +188,7 @@ footer a {
 }
 
 /* Media query for tablets */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px), print {
     img {
         max-width: 100%;
     }
@@ -258,7 +262,7 @@ footer a {
 }
 
 /* Media query for ONLY tablets */
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 720px) and (max-width: 1023px), print {
     /* Display nav below profile image */
     nav {
         clear: left;
@@ -268,7 +272,7 @@ footer a {
 }
 
 /* Media query for laptops and desktops */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px), print {
     /* Desktop style rules for header */
     header h1 {
         font-size: 4em;
@@ -297,21 +301,25 @@ footer a {
         display: inline-block;
     }
 
+    .left-column {
+        float: left;
+        width: 48%;
+    }
+
+    .right-column {
+        float: right;
+        width: 48%;
+    }
+
     .end-of-columns {
         clear: both;
     }
+}
 
-    #bio {
-        float: left;
-        max-width: 48%;
-    }
-
-    #highlight {
-        float: right;
-        max-width: 48%;
-    }
-    
-    #highlight img {
-        max-width: 100%;
+/* Media query for large desktop monitors */
+@media screen and (min-width: 1921px), print {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
     }
 }
