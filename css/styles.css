@@ -25,12 +25,12 @@ img {
 }
 
 @media (prefers-color-scheme: light) { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
-    html {
+    html, img {
         border-color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    html {
+    html, img {
         border-color: white;
     }
 }
@@ -216,9 +216,6 @@ footer a {
         max-width: 125px;
         margin-left: 1.0em;
     }
-    #profile img {
-        border-color: white;
-    }
 
     /* Tablet style rules for nav area */
     nav ul {
@@ -272,7 +269,7 @@ footer a {
 }
 
 /* Media query for laptops and desktops */
-@media screen and (min-width: 1024px), print {
+@media screen and (min-width: 1024px), print and (orientation: landscape) {
     /* Desktop style rules for header */
     header h1 {
         font-size: 4em;
@@ -317,9 +314,25 @@ footer a {
 }
 
 /* Media query for large desktop monitors */
-@media screen and (min-width: 1921px), print {
+@media screen and (min-width: 1921px) {
     #container {
         width: 1920px;
         margin: 0 auto;
+    }
+}
+
+/* Media query for print */
+@media print {
+    html {
+        background-color: white;
+        color: black;
+    }
+
+    nav ul li a.active {
+        color: black;
+    }
+
+    main a {
+        color: black;
     }
 }
