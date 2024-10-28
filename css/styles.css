@@ -25,12 +25,12 @@ img {
 }
 
 @media (prefers-color-scheme: light) { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
-    html {
+    html, img {
         border-color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    html {
+    html, img {
         border-color: white;
     }
 }
@@ -53,7 +53,6 @@ header {
     position: sticky;
     top: 0;
     color: #fff;
-    background-color: #357;
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
@@ -184,7 +183,7 @@ footer a {
 }
 
 /* Media query for tablets */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720px), print {
     img {
         max-width: 100%;
     }
@@ -211,9 +210,6 @@ footer a {
         float: left;
         max-width: 125px;
         margin-left: 1.0em;
-    }
-    #profile img {
-        border-color: white;
     }
 
     /* Tablet style rules for nav area */
@@ -268,7 +264,7 @@ footer a {
 }
 
 /* Media query for laptops and desktops */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px), print and (orientation: landscape) {
     /* Desktop style rules for header */
     header h1 {
         font-size: 4em;
@@ -297,21 +293,91 @@ footer a {
         display: inline-block;
     }
 
+    .left-column {
+        float: left;
+        width: 48%;
+    }
+
+    .right-column {
+        float: right;
+        width: 48%;
+    }
+
     .end-of-columns {
         clear: both;
     }
+}
 
-    #bio {
-        float: left;
-        max-width: 48%;
+/* Media query for large desktop monitors */
+@media screen and (min-width: 1921px) {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Media query for print */
+@media print {
+    /* Reset all margins */
+    body, header, nav, main, footer, h1, h2, h3, img, ul {
+        margin: 0;
+        padding: 0;
     }
 
-    #highlight {
-        float: right;
-        max-width: 48%;
+    /* Style rules for header */
+    header {
+        color: black;
     }
-    
-    #highlight img {
-        max-width: 100%;
+    header h1 {
+        font-size: 1.5em;
+    }
+    header h2 {
+        font-size: 1.0em;
+    }
+    #profile img {
+        max-width: 100px;
+    }
+
+    /* Style rules for nav area */
+    nav {
+        margin-top: 1.0em;
+    }
+    nav ul li {
+        border: 0;
+    }
+    nav ul li a.active, nav ul li a {
+        color: black;
+        background-color: #357;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 0.8em;
+    }
+
+    /* Style rules for main area */
+    main {
+        background-color: white;
+        color: black;
+        font-size: 1.0em;
+    }
+    main h3 {
+        font-size: 1.0em;
+    }
+
+    main p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    main a {
+        color: black;
+    }
+
+    /* Style rules for footer */
+    footer {
+        font-size: 1.0em;
+        margin: 0;
+    }
+    footer p {
+        margin: 0.5em;
     }
 }
