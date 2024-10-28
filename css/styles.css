@@ -11,11 +11,6 @@ body, header, nav, main, footer, h1, img, ul {
     border: 0;
 }
 
-/* Constants: Source: https://sciter.com/developers/for-web-programmers/css-constants/ */
-@const BRKPT_TABLETS: 500px;
-@const BRKPT_LG_TABLETS: 750px;
-@const BRKPT_DESKTOPS: 1000px;
-
 /* Style Rules for mobile */
 body {
     background-color: #357;
