@@ -1,17 +1,22 @@
 /*
     Andrew J. Tieszen
     styles.css
-    27 October 2024
+    11 November 2024
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, img, ul {
+body, header, nav, main, footer, h1, img, ul, article, section, aside, figure, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-/* Style Rules for mobile */
+/* Box sizing rules */
+* {
+    box-sizing: border-box; /* Why isn't this default??? */
+}
+
+/* General Style Rules for mobile */
 body {
     background-color: #357;
 }
@@ -62,6 +67,11 @@ header h1 {
     margin: 1em 0 1em 0;
 }
 
+header figcaption {
+    /* Only display on desktop viewport */
+    display: none;
+}
+
 .small-tablets {
     display: none;
 }
@@ -109,6 +119,9 @@ main {
 main a {
     text-decoration: none;
 }
+main h3 {
+    text-align: center;
+}
 
 /* Mobile color rules for main content */
 @media (prefers-color-scheme: light) {
@@ -144,7 +157,6 @@ main a {
 }
 
 /* Mobile style rules for contact page */
-
 .map {
     border: 2px solid;
     border-radius: 10px;
@@ -234,15 +246,17 @@ footer a {
         padding-right: 5%;
     }
 
-    /* Temporary; must include gradient in assignment submission. */
+    aside {
+        padding: 1%;
+    }
     @media screen and (prefers-color-scheme: light) {
-        main {
-            background: linear-gradient(to bottom, #fff, #68B);
+        aside {
+            background: #def;
         }
     }
     @media screen and (prefers-color-scheme: dark) {
-        main {
-            background: linear-gradient(to bottom, #223, #000);
+        aside {
+            background: #334;
         }
     }
 
@@ -250,6 +264,12 @@ footer a {
     .email-link {
         font-size: 1.0em;
         display: inline-block;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
     }
 }
 
@@ -273,6 +293,23 @@ footer a {
         margin-top: 1.5em;
         font-size: 1.75em;
     }
+
+    header figure {
+        position: relative
+    }
+    header figcaption {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: calc(100% - 4px);
+        padding: 10px;
+        background-color: rgba(34, 34, 51, 0.5);
+        border-radius: 10px;
+        margin: 0px 2px 6px 2px;
+        font-size: 0.95em;
+    }
+
     #profile {
         max-width: 100%;
         margin-bottom: 1em;
