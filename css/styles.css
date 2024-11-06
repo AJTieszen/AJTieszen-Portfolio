@@ -30,18 +30,25 @@ img {
 }
 
 @media (prefers-color-scheme: light) { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
-    html, img {
+    html, img, a img {
         border-color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    html, img {
+    html, img, a img {
         border-color: white;
     }
 }
 
 a {
     display: inline-block;
+}
+
+figure img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin: auto;
 }
 
 .desktop {
@@ -58,6 +65,7 @@ header {
     position: sticky;
     top: 0;
     color: #fff;
+    background-color: #357;
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
@@ -69,10 +77,6 @@ header h1 {
 
 header figcaption {
     /* Only display on desktop viewport */
-    display: none;
-}
-
-.small-tablets {
     display: none;
 }
 
@@ -120,6 +124,26 @@ main a {
     text-decoration: none;
 }
 main h3 {
+    text-align: center;
+}
+main figure {
+    position: relative;
+}
+main figcaption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: calc(100% - 4px);
+    padding: 10px;
+    background-color: rgba(34, 34, 51, 0.5);
+    border-radius: 10px;
+    margin: 0px 2px 6px 2px;
+    font-size: 1.2em;
+}
+
+.grid {
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -207,7 +231,6 @@ footer a {
     .mobile {
         display: none;
     }
-
     /* Tablet style rules for header */
     header {
         /* remove sticky header */
@@ -279,7 +302,6 @@ footer a {
     nav {
         clear: left;
         margin-top: 3em;
-        
     }
 }
 
