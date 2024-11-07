@@ -30,18 +30,25 @@ img {
 }
 
 @media (prefers-color-scheme: light) { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
-    html, img {
+    html, img, a img {
         border-color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    html, img {
+    html, img, a img {
         border-color: white;
     }
 }
 
 a {
     display: inline-block;
+}
+
+figure img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin: auto;
 }
 
 .desktop {
@@ -58,21 +65,18 @@ header {
     position: sticky;
     top: 0;
     color: #fff;
+    background-color: #357;
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
-
 header h1 {
     font-size: 2.5em;
     margin: 1em 0 1em 0;
+    text-shadow: 4px 4px #334;
 }
 
 header figcaption {
     /* Only display on desktop viewport */
-    display: none;
-}
-
-.small-tablets {
     display: none;
 }
 
@@ -81,14 +85,12 @@ nav ul {
     list-style-type: none;
     margin: auto;
 }
-
 nav ul li {
     display: block;
     font-size: 1.2em;
     font-family: "Roboto", sans-serif;
     border-bottom: 1px solid #fff;
 }
-
 nav ul li:first-child {
     border-top: 1px solid #fff;
 }
@@ -100,11 +102,9 @@ nav ul li a {
     padding: 0.5em 0.5em;
     text-decoration: none;
 }
-
 nav ul li a:hover {
     color: aqua;
 }
-
 nav ul li a.active {
     color: aqua;
     background: #68B;
@@ -116,10 +116,50 @@ main {
     padding: 2%;
     font-family: "Tinos", serif;
 }
+main h3 {
+    text-align: center;
+}
+
 main a {
     text-decoration: none;
 }
-main h3 {
+
+main figure {
+    position: relative;
+}
+main figcaption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: calc(100% - 4px);
+    padding: 10px;
+    background-color: rgba(34, 34, 51, 0.5);
+    border-radius: 10px;
+    margin: 0px 2px 6px 2px;
+    font-size: 1.2em;
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    main figure:hover {
+        box-shadow: 8px 8px 10px 10px #002;
+    }
+    #screenshot-lt {
+        display: none;
+    }
+}
+@media (prefers-color-scheme: light) {
+    main figure:hover {
+        box-shadow: 8px 8px 10px 10px #bbc;
+    }
+    #screenshot-dk {
+        display: none;
+    }
+}
+
+.grid {
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -172,7 +212,6 @@ main h3 {
 #contact {
     text-align: center;
 }
-
 #contact ul {
     list-style-type: none;
 }
@@ -188,7 +227,6 @@ footer {
     position: sticky;
     position: -webkit-sticky;
 }
-
 footer a {
     color: #fff;
     text-decoration: none;
@@ -207,13 +245,11 @@ footer a {
     .mobile {
         display: none;
     }
-
     /* Tablet style rules for header */
     header {
         /* remove sticky header */
         position: static;
     }
-
     header h1 {
         margin: 0.5em 0 0.5em 0;
     }
@@ -279,7 +315,6 @@ footer a {
     nav {
         clear: left;
         margin-top: 3em;
-        
     }
 }
 
@@ -343,6 +378,10 @@ footer a {
     .end-of-columns {
         clear: both;
     }
+
+    .grid {
+        grid-template-columns: auto auto auto auto;
+    }
 }
 
 /* Media query for large desktop monitors */
@@ -352,6 +391,7 @@ footer a {
         margin: 0 auto;
     }
 }
+
 
 /* Media query for print */
 @media print {
@@ -371,6 +411,10 @@ footer a {
     header h2 {
         font-size: 1.0em;
     }
+    header figcaption {
+        display: none;
+    }
+
     #profile img {
         max-width: 100px;
     }
@@ -399,14 +443,16 @@ footer a {
     main h3 {
         font-size: 1.0em;
     }
-
     main p {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
-
     main a {
         color: black;
+    }
+    main figcaption {
+        position: relative;
+        background: none;
     }
 
     /* Style rules for footer */
