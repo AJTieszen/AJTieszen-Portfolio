@@ -69,10 +69,10 @@ header {
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
-
 header h1 {
     font-size: 2.5em;
     margin: 1em 0 1em 0;
+    text-shadow: 4px 4px #334;
 }
 
 header figcaption {
@@ -85,14 +85,12 @@ nav ul {
     list-style-type: none;
     margin: auto;
 }
-
 nav ul li {
     display: block;
     font-size: 1.2em;
     font-family: "Roboto", sans-serif;
     border-bottom: 1px solid #fff;
 }
-
 nav ul li:first-child {
     border-top: 1px solid #fff;
 }
@@ -104,11 +102,9 @@ nav ul li a {
     padding: 0.5em 0.5em;
     text-decoration: none;
 }
-
 nav ul li a:hover {
     color: aqua;
 }
-
 nav ul li a.active {
     color: aqua;
     background: #68B;
@@ -120,12 +116,14 @@ main {
     padding: 2%;
     font-family: "Tinos", serif;
 }
-main a {
-    text-decoration: none;
-}
 main h3 {
     text-align: center;
 }
+
+main a {
+    text-decoration: none;
+}
+
 main figure {
     position: relative;
 }
@@ -140,6 +138,24 @@ main figcaption {
     border-radius: 10px;
     margin: 0px 2px 6px 2px;
     font-size: 1.2em;
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    main figure:hover {
+        box-shadow: 8px 8px 10px 10px #002;
+    }
+    #screenshot-lt {
+        display: none;
+    }
+}
+@media (prefers-color-scheme: light) {
+    main figure:hover {
+        box-shadow: 8px 8px 10px 10px #bbc;
+    }
+    #screenshot-dk {
+        display: none;
+    }
 }
 
 .grid {
@@ -196,7 +212,6 @@ main figcaption {
 #contact {
     text-align: center;
 }
-
 #contact ul {
     list-style-type: none;
 }
@@ -212,7 +227,6 @@ footer {
     position: sticky;
     position: -webkit-sticky;
 }
-
 footer a {
     color: #fff;
     text-decoration: none;
@@ -236,7 +250,6 @@ footer a {
         /* remove sticky header */
         position: static;
     }
-
     header h1 {
         margin: 0.5em 0 0.5em 0;
     }
@@ -379,6 +392,7 @@ footer a {
     }
 }
 
+
 /* Media query for print */
 @media print {
     /* Reset all margins */
@@ -397,6 +411,10 @@ footer a {
     header h2 {
         font-size: 1.0em;
     }
+    header figcaption {
+        display: none;
+    }
+
     #profile img {
         max-width: 100px;
     }
@@ -425,14 +443,16 @@ footer a {
     main h3 {
         font-size: 1.0em;
     }
-
     main p {
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
-
     main a {
         color: black;
+    }
+    main figcaption {
+        position: relative;
+        background: none;
     }
 
     /* Style rules for footer */
