@@ -365,6 +365,10 @@ footer a {
     .end-of-columns {
         clear: both;
     }
+
+    .grid {
+        grid-template-columns: auto auto auto auto;
+    }
 }
 
 /* Media query for large desktop monitors */
