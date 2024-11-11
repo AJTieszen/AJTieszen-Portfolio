@@ -142,7 +142,7 @@ main figcaption {
 }
 
 @media (prefers-color-scheme: dark) {
-    main figure:hover {
+    main figure img:hover {
         box-shadow: 8px 8px 10px 10px #002;
     }
     #screenshot-lt {
@@ -150,7 +150,7 @@ main figcaption {
     }
 }
 @media (prefers-color-scheme: light) {
-    main figure:hover {
+    main figure img:hover {
         box-shadow: 8px 8px 10px 10px #bbc;
     }
     #screenshot-dk {
@@ -401,7 +401,7 @@ footer a {
         padding: 0;
     }
 
-    /* Style rules for header */
+    /* Print style rules for header */
     header {
         color: black;
     }
@@ -419,7 +419,7 @@ footer a {
         max-width: 100px;
     }
 
-    /* Style rules for nav area */
+    /* Print style rules for nav area */
     nav {
         margin-top: 1.0em;
     }
@@ -434,7 +434,7 @@ footer a {
         font-size: 0.8em;
     }
 
-    /* Style rules for main area */
+    /* Print style rules for main area */
     main {
         background-color: white;
         color: black;
@@ -455,7 +455,7 @@ footer a {
         background: none;
     }
 
-    /* Style rules for footer */
+    /* Print style rules for footer */
     footer {
         font-size: 1.0em;
         margin: 0;
