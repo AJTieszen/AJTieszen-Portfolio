@@ -1,4 +1,8 @@
-https://www.w3schools.com/html/html5_semantic_elements.asp and https://developer.mozilla.org/en-US/docs/Glossary/Semantics both provided the same non-exhaustive list of HTML5 semantic elements, which are presumably among the most commonly used (brackets omitted for readability):
-header, nav, main, footer, article, section, aside, details/summary, figure/figcaption, mark, and time. W3 Schools also included table and form in their list, while the Mozilla Developer Network included the six heading levels (h1 through h6).
-Of these, I have already used the main structural elements (header, nav, main, and footer) to define the top-level structure of the website. Within the main element, I used article, section, and aside to arrange individual blocks of content, as well as figure and figcaption to label most of the graphics on the website. Headings were naturally used throughout the website to inroduce content.
-I could use the summary and details elements to provide additional details about my work experience and group affiliations, especially in the mobile viewport where space is limited. The form and table elements will likely be used in the assignment for chapter 8, where the form would make sense on the contact page. I am still unsure of where and how I want to use the table element in my portfolio.
+Table pros:
+    1. Easy to read and interpret data and make comparisons
+    2. 
+    3. 
+Table cons:
+    1. May take up too much space for mobile viewport
+    2. 
+    3. 
