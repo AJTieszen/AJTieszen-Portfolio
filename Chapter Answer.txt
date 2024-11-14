@@ -1,8 +1,8 @@
 Table pros:
     1. Easy to read and interpret data and make comparisons
-    2. 
-    3. 
+    2. Mostly intuitive control of grid-like layout
+    3. Widespread compatibility due to longevitiy (standardized in late 1990's, with prior browser-specific support) (Source: https://www.tiernok.com/posts/history-of-html-table-layouts.html)
 Table cons:
     1. May take up too much space for mobile viewport
-    2. 
-    3. 
+    2. Formatting quirks (i.e. try to take up full width of container unless manually set to "width: max-content;" unintuitive implementation of some properties)
+    3. Phase of overuse as a layout tool before better options were introduced (source: https://thehistoryoftheweb.com/tables-layout-absurd/)
