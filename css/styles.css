@@ -1,7 +1,7 @@
 /*
     Andrew J. Tieszen
     styles.css
-    13 November 2024
+    14 November 2024
 */
 
 /* CSS Reset */
@@ -166,6 +166,28 @@ main ul {
 .grid {
     margin: 0 auto;
     text-align: center;
+}
+
+/* Mobile style rules for form elements */
+fieldset, input, select, textarea {
+    margin-bottom: 2%;
+}
+fieldset legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    padding: 3%;
+}
+
+.form-inputs {
+    width: 100%;
+    margin: 0 auto;
+}
+
+form #submit {
+    margin: 0 auto;
 }
 
 /* Mobile color rules for main content */
