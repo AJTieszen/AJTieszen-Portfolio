@@ -2,7 +2,7 @@
 <!--
     Andrew J. Tieszen
     contact.html
-    11 November 2024
+    14 November 2024
 -->
 <html lang="en">
     <head>
@@ -67,6 +67,43 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25047.076854245734!2d-104.58233356616212!3d38.30534123279674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8713a3ee2ddd9b4f%3A0x1a76c6856daebb93!2sColorado%20State%20University%20Pueblo!5e0!3m2!1sen!2sus!4v1727908338366!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
                 </section>
                 <div class="end-of-columns"></div>
+
+                <h3> Email me: </h3>
+                <p> Note: this form is not yet operational. Please contact me via the email link above. </p>
+                <form id="email-me">
+                    <fieldset>
+                        <legend> Contact information </legend>
+
+                        <label for="name"> Name: </label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email"> Email address: </label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone"> Phone number: </label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <label for="contact-pref"> Preferred reply method: </label>
+                        <select name="contact-pref" id="contact-pref">
+                            <option value="email"> Email </option>
+                            <option value="call"> Phone call </option>
+                            <option value="text"> Text message </option>
+                            <option value="none"> No reply </option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> Message </legend>
+
+                        <label for="subject"> Subject: </label>
+                        <input type="text" id="subject" name="subject">
+
+                        <label for="message"> Message: </label>
+                        <textarea id="message" name="message" rows="10" cols="80"></textarea>
+                    </fieldset>
+
+                    <input type="submit" id="submit" value="Send" class="btn">
+                </form>
             </main>
 
             <footer>
