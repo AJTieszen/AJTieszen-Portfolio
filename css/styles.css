@@ -302,26 +302,7 @@ footer a {
     }
 
     /* Tablet style rules for tables */
-    table {
-        width: 100%;
-        border: 1px solid;
-        border-collapse: collapse;
-        margin: 2% auto;
-        text-align: center;
-        column-fill: balance;
-    }
-    th {
-        color: white;
-        background-color: #357;
-        border: 1px solid;
-    }
-    td {
-        border-left: 1px solid;
-        border-right: 1px solid;
-    }
-    tr:nth-child(odd) {
-        background-color: #334;
-    }
+    
 
     /* Tablet style rules for footer */
     .email-link {
