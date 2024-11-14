@@ -30,12 +30,12 @@ img {
 }
 
 @media (prefers-color-scheme: light) { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
-    html, img, a img {
+    html, img, a img, td, th {
         border-color: black;
     }
 }
 @media (prefers-color-scheme: dark) {
-    html, img, a img {
+    html, img, a img, td, th {
         border-color: white;
     }
 }
@@ -302,7 +302,42 @@ footer a {
     }
 
     /* Tablet style rules for tables */
+    table {
+        width: max-content;
+        max-width: 100%;
+        border: 2px solid;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    th {
+        width: 25%;
+        min-width: 150px;
+        border: 1px solid;
+        color: white;
+        background-color: #357;
+    }
+    td {
+        border-right: 1px dashed;
+    }
+    td:last-child {
+        border-right: none;
+    }
     
+    /* Table color scheme */
+    @media (prefers-color-scheme: dark) {
+        tr:nth-child(odd) {
+            background-color: #334;
+        }
+    }
+    @media (prefers-color-scheme: light) {
+        th {
+            border-color: black;
+        }
+        tr:nth-child(even) {
+            background-color: #bbc;
+        }
+    }
 
     /* Tablet style rules for footer */
     .email-link {
@@ -318,7 +353,7 @@ footer a {
 }
 
 /* Media query for ONLY tablets */
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 720px) and (max-width: 1249px) {
     /* Display nav below profile image */
     nav {
         clear: left;
@@ -327,7 +362,7 @@ footer a {
 }
 
 /* Media query for laptops and desktops */
-@media screen and (min-width: 1024px), print and (orientation: landscape) {
+@media screen and (min-width: 1250px), print and (orientation: landscape) {
     /* Desktop style rules for header */
     header h1 {
         font-size: 4em;
@@ -371,6 +406,10 @@ footer a {
     /* Desktop style rules for main area */
     main li a {
         display: inline-block;
+    }
+
+    th {
+        min-width: 280px;
     }
 
     .left-column {
