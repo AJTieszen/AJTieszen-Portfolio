@@ -178,7 +178,6 @@ fieldset legend {
 
 label {
     display: block;
-    padding: 3%;
 }
 
 .form-inputs {
@@ -187,7 +186,7 @@ label {
 }
 
 form #submit {
-    margin: 0 auto;
+    margin: 0 0 0 auto;
 }
 
 /* Mobile color rules for main content */
@@ -361,16 +360,29 @@ footer a {
         }
     }
 
-    /* Tablet style rules for footer */
-    .email-link {
-        font-size: 1.0em;
-        display: inline-block;
+    /* Tablet style rules for forms */
+    fieldset {
+        margin-bottom: 5px;
+    }
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 3px;
+    }
+    #submit {
+        grid-column: 2;
     }
     
     .grid {
         display: grid;
         grid-template-columns: auto auto auto;
         grid-gap: 20px;
+    }
+
+    /* Tablet style rules for footer */
+    .email-link {
+        font-size: 1.0em;
+        display: inline-block;
     }
 }
 
@@ -444,7 +456,7 @@ footer a {
         width: 48%;
     }
 
-    .end-of-columns {
+    .end-of-columns, #submit {
         clear: both;
     }
 
