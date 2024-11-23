@@ -190,6 +190,10 @@ fieldset, input, select, textarea {
 fieldset legend {
     font-weight: bold;
 }
+/* Hide inactive form */
+.form-grid, .form-header {
+    display: none;
+}
 
 label {
     display: block;
@@ -387,8 +391,9 @@ footer a {
     fieldset {
         margin-bottom: 5px;
     }
+    /* Hide inactive form */
     .form-grid {
-        display: grid;
+        /*display: grid;*/
         grid-template-columns: auto auto;
         grid-gap: 3px;
     }
