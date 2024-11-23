@@ -24,7 +24,7 @@ body {
 img {
     max-width: 60%;
     display: block;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 10px;
     margin: auto;
 }
@@ -138,11 +138,10 @@ main figcaption {
     border-radius: 10px;
     margin: 0px 8px 6px 8px;
     font-size: 1.2em;
-    color: white;
 }
 main .vidcaption {
     position: relative;
-    margin: 0;
+    margin: 0 0 0.2em 0;
     padding: 0;
     font-size: 1.0em;
     background: none;
@@ -150,6 +149,8 @@ main .vidcaption {
 
 main video {
     max-width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 main ul {
@@ -233,9 +234,16 @@ form #submit {
     text-align: center;
 }
 
+.columns {
+    display: none;
+}
+.no-columns {
+    display: inline-block;
+}
+
 /* Mobile style rules for contact page */
 .map {
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 10px;
     width: 90%;
     aspect-ratio: 16/9; /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio */
@@ -321,6 +329,7 @@ footer a {
 
     aside {
         padding: 1%;
+        border-radius: 10px;
     }
     @media screen and (prefers-color-scheme: light) {
         aside {
@@ -337,7 +346,7 @@ footer a {
     table {
         width: max-content;
         max-width: 100%;
-        border: 2px solid;
+        border: 1px solid;
         margin: 0 auto 0 auto;
         text-align: center;
         border-collapse: collapse;
@@ -459,12 +468,12 @@ footer a {
 
     .left-column {
         float: left;
-        width: 48%;
+        width: 56%;
     }
 
     .right-column {
         float: right;
-        width: 48%;
+        width: 40%;
     }
 
     .end-of-columns, #submit {
@@ -473,6 +482,13 @@ footer a {
 
     .grid {
         grid-template-columns: auto auto auto auto;
+    }
+
+    .columns {
+        display: inline-block;
+    }
+    .no-columns {
+        display: none;
     }
 }
 
