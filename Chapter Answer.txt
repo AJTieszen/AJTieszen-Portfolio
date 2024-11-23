@@ -1,8 +1,1 @@
-Table pros:
-    1. Easy to read and interpret data and make comparisons
-    2. Mostly intuitive control of grid-like layout
-    3. Widespread compatibility due to longevitiy (standardized in late 1990's, with prior browser-specific support) (Source: https://www.tiernok.com/posts/history-of-html-table-layouts.html)
-Table cons:
-    1. May take up too much space for mobile viewport
-    2. Formatting quirks (i.e. try to take up full width of container unless manually set to "width: max-content;" unintuitive implementation of some properties)
-    3. Phase of overuse as a layout tool before better options were introduced (source: https://thehistoryoftheweb.com/tables-layout-absurd/)
+Audio may be extremely helpful to include on some websites, especially for its smaller file size compared with video. However, I am not currently planning to keep audio on my portfolio webpage; I simply do not have any relevant audio to include at the moment as images and video are more relevant to my career path. If anything, I might include some sample audio if I add a "hobbies" page, for my trumpet playing.
